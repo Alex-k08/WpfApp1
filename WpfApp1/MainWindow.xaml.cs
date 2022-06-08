@@ -23,7 +23,7 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
-            NavigationService.Navigate(new Avtoriz());
+            NavigationService.Navigate(new Page1());
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

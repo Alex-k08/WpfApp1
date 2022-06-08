@@ -42,10 +42,10 @@ namespace WpfApp1
             {
                 MessageBox.Show("Вы не ввели пароль");
             }
-            var db = new alex_kEntities();
+            var db = new alex_kEntities1();
             var user = new Users();
-            user.LoginName= Login1.Text;
-            user.PasswordName = pass.Text;
+            user.Login= Login1.Text;
+            user.Password = pass.Text;
             db.Users.Add(user);
             db.SaveChanges();
 

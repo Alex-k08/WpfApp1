@@ -27,11 +27,13 @@ namespace WpfApp1
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var x = new alex_kEntities();
-            var users = x.Users.Where((user) => user.LoginName == Login1.Text && user.PasswordName == Password1.Password).ToList();
+            var x = new alex_kEntities1();
+            var users = x.Users.Where((user) => user.Login == Login1.Text && user.Password == Password1.Password).ToList();
             if (users.Count > 0)
             {
-                NavigationService.Navigate(new Posle());
+
+               Console.WriteLine(x.userType.Find(users[0].Type).name);
+                NavigationService.Navigate(new Posle(users[0]));
             }
             else
             {

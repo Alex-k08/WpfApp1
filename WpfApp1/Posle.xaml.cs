@@ -20,9 +20,13 @@ namespace WpfApp1
     /// </summary>
     public partial class Posle : Page
     {
-        public Posle()
+        private Users user;
+        public Posle(Users user)
         {
+            this.user = user;
             InitializeComponent();
+            UserName.Content = $"{user.Login}";
+            Password.Content = $"{user.Password}";
         }
     }
 }
